@@ -17,23 +17,25 @@ export default function ListTask() {
     <div>
       <div className="row px-2">
         {/* -------------------------------------------- show completed tasks button */}
-        <button
+        { globalList.length !==0 &&
+          <button
           className="btn btn-outline-dark col-3 mx-1"
           onClick={() => {
             dispatch(filterByDone(true));
           }}
         >
           show completed tasks ({numberOfFiltred(true)})
-        </button>
+        </button>}
         {/* -------------------------------------------- show incompleted tasks btn */}
-        <button
+        { globalList.find(task => task.isDone === false) &&
+          <button
           className="btn btn-outline-dark col-3 mx-1"
           onClick={() => {
             dispatch(filterByDone(false));
           }}
         >
           show incompleted tasks ({numberOfFiltred(false)})
-        </button>
+        </button>}
         {/* --------------------------------------------- show all tasks btn */}
         {filtredList.length !== globalList.length && (
           <button
