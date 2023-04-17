@@ -43,7 +43,7 @@ export default function AddTask() {
           add
         </button>
       </form>
-      {showError && <p className="text-danger">fill out your fields</p>}
+      {showError && <p className="text-danger">please fill out your fields !</p>}
     </div>
   );
 }

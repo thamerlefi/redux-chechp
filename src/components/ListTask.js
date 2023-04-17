@@ -27,7 +27,7 @@ export default function ListTask() {
           show completed tasks ({numberOfFiltred(true)})
         </button>}
         {/* -------------------------------------------- show incompleted tasks btn */}
-        { globalList.find(task => task.isDone === false) &&
+        { globalList.length !==0 &&
           <button
           className="btn btn-outline-dark col-3 mx-1"
           onClick={() => {
