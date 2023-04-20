@@ -24,7 +24,7 @@ export default function ListTask() {
             dispatch(filterByDone(true));
           }}
         >
-          show completed tasks ({numberOfFiltred(true)})
+          completed tasks ({numberOfFiltred(true)})
         </button>}
         {/* -------------------------------------------- show incompleted tasks btn */}
         { globalList.length !==0 &&
@@ -34,7 +34,7 @@ export default function ListTask() {
             dispatch(filterByDone(false));
           }}
         >
-          show incompleted tasks ({numberOfFiltred(false)})
+          incompleted tasks ({numberOfFiltred(false)})
         </button>}
         {/* --------------------------------------------- show all tasks btn */}
         {filtredList.length !== globalList.length && (
